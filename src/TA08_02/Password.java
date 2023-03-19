@@ -2,12 +2,15 @@ package TA08_02;
 import java.util.Random;
 
 public class Password {
-	int longitud;
-	String contrasena;
+	
+	final private int LONGITUD_POR_DEFECTO = 8;
+	
+	private int longitud;
+	private String contrasena;
 
 	public Password(){
-		this.longitud = 8;
-		this.contrasena = "";
+		this.longitud = this.LONGITUD_POR_DEFECTO;
+		this.contrasena = genRndPassword(this.longitud);
 	}
 	
 	public Password(int longitud){
